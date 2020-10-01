@@ -5,12 +5,12 @@ html,body{
     height: 100%;
 }
 #app{
-    font-size: 0.2rem;
+    font-size: 0.26rem;
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding-bottom:0.99rem;
-    padding-top:1rem;
+    /* padding-bottom:0.99rem;
+    padding-top:1rem; */
 }
 
 .footerCon{

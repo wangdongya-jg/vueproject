@@ -16,7 +16,21 @@ const router = new vueRouter({
             component: () => import("../views/home/home"),
             meta: {
                 showFooter: true
-            }
+            },
+            children: [
+                {
+                    path: '/',
+                    redirect:'/home/recommend'
+                },
+                {
+                    path: 'recommend',
+                    name: 'Recommend',
+                    component: () => import('../views/home/recommend/index'),
+                    meta: {
+                        showFooter: true
+                    }
+                }
+            ]
         },
         {
             path: "/sort",
