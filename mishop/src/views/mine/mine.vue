@@ -1,7 +1,13 @@
 <!-- 组件说明 -->
 <template>
-    <div class=''>
-        我的
+    <div class='mine'>
+        <div class="loginBox">
+            <div class="userImg">
+                <img src="" >
+            </div>
+            <div class="login"></div>
+        </div>
+        <div class="dingdan"></div>
     </div>
 </template>
 
