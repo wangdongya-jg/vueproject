@@ -21,7 +21,15 @@ Vue.use(Overlay);
 import { NavBar } from 'vant';
 Vue.use(NavBar);
 
+import { Stepper } from 'vant';
+Vue.use(Stepper);
+
 Vue.use(Vant)
+
+//cell单元格
+import { Cell, CellGroup } from 'vant';
+Vue.use(Cell);
+Vue.use(CellGroup);
 
 Vue.config.productionTip = false
 

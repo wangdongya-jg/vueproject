@@ -13,9 +13,7 @@
                 <h3>米家四位四控插线板</h3>
                 <p>售价：<span>89</span>&nbsp;元</p>
                 <div class="cartNum">
-                    <span class="sub">-</span>
-                    <span>1</span>
-                    <span class="add">+</span>
+                    <van-stepper disable-input />
                     <van-icon name="delete" class="icon" size="22" color="#888"/>
                 </div>
             </div>
@@ -35,6 +33,26 @@
         </div>
         <div class="youlike">
             <img src="http://qiniu.verydog.cn//show.liluo.cc/e95ade2750a7fde92369b416c7d3176d.jpg">
+        </div>
+        <div class="proList">
+            <div class="products">
+                <img src="../../assets/img/1.jpg">
+                <h3>13.3笔记本 i5独显</h3>
+                <p>指纹解锁 全金属机身</p>
+                <p class="price">￥<span>5199</span></p>
+            </div>
+             <div class="products">
+                <img src="../../assets/img/1.jpg">
+                <h3>13.3笔记本 i5独显</h3>
+                <p>指纹解锁 全金属机身</p>
+                <p class="price">￥<span>5199</span></p>
+            </div>
+             <div class="products">
+                <img src="../../assets/img/1.jpg">
+                <h3>13.3笔记本 i5独显</h3>
+                <p>指纹解锁 全金属机身</p>
+                <p class="price">￥<span>5199</span></p>
+            </div>
         </div>
     </div>
 </template>
@@ -77,6 +95,7 @@ activated() {}, //如果页面有keep-alive缓存功能，这个函数会触发
 <style lang='scss' scoped>
 .cart{
     margin-top:1.2rem;
+    margin-bottom: 1rem;
 }
 .header{
     position: fixed;
@@ -159,6 +178,26 @@ activated() {}, //如果页面有keep-alive缓存功能，这个函数会触发
     width:100%;
     img{
         width: 100%;
+    }
+}
+.proList{
+    display: flex;
+    z-index: -10;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .products{
+        width: 3.7rem;
+        height: 4.7rem;
+        img{
+            width: 100%;
+            height: 3.5rem;
+        }
+        p{
+            color: #666;
+        }
+        .price{
+            color: coral;
+        }
     }
 }
 </style>

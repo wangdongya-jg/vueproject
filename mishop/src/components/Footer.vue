@@ -50,6 +50,8 @@ activated() {}, //如果页面有keep-alive缓存功能，这个函数会触发
     width: 100%;
     position: fixed;
     bottom: 0;
+    z-index: 10;
+    background: #fff;
 }
 .footerItem{
     font-size: 0.2rem;
