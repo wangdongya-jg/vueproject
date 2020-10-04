@@ -15,11 +15,11 @@
     </div>
     <ul class="navList">
       <li class="navItem"><router-link tag="i" to="/home/recommend">推荐</router-link></li>
-      <li class="navItem"><i>手机</i></li>
-      <li class="navItem"><i>智能</i></li>
-      <li class="navItem"><i>电视</i></li>
-      <li class="navItem"><i>电脑</i></li>
-      <li class="navItem"><i>全面屏</i></li>
+      <li class="navItem"><router-link tag="i" to="/home/phone">手机</router-link></li>
+      <li class="navItem"><router-link tag="i" to="/home/intell">智能</router-link></li>
+      <li class="navItem"><router-link tag="i" to="/home/tv">电视</router-link></li>
+      <li class="navItem"><router-link tag="i" to="/home/computer">电脑</router-link></li>
+      <li class="navItem"><router-link tag="i" to="/home/quan">全面屏</router-link></li>
       <li class="navItem"><i>盒子</i></li>
       <li class="navItem"><i>生活周边</i></li>
       <li class="navItem"><i>艺术</i></li>

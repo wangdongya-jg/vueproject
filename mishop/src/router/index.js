@@ -29,7 +29,48 @@ const router = new vueRouter({
                     meta: {
                         showFooter: true
                     }
-                }
+                },
+                {
+                    path: 'phone',
+                    name: 'Phone',
+                    component: () => import('../views/home/phone/index'),
+                    meta: {
+                        showFooter: true
+                    }
+                },
+                {
+                    path: 'intell',
+                    name: 'Intell',
+                    component: () => import('../views/home/intell/index'),
+                    meta: {
+                        showFooter: true
+                    }
+                },
+                {
+                    path: 'computer',
+                    name: 'Computer',
+                    component: () => import('../views/home/computer/index'),
+                    meta: {
+                        showFooter: true
+                    }
+                },
+                {
+                    path: 'quan',
+                    name: 'Quan',
+                    component: () => import('../views/home/quan/index'),
+                    meta: {
+                        showFooter: true
+                    }
+                },
+                {
+                    path: 'tv',
+                    name: 'Tv',
+                    component: () => import('../views/home/tv/index'),
+                    meta: {
+                        showFooter: true
+                    }
+                },
+
             ]
         },
         {
