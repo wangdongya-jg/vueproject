@@ -3,6 +3,7 @@ import App from './App.vue'
 import Vant from 'vant'
 import 'vant/lib/index.css'
 import router from './router'
+import request from './utils/request'
 
 // 轮播图
 import { Swipe, SwipeItem } from 'vant';
@@ -35,6 +36,14 @@ Vue.use(CellGroup);
 import { Form } from 'vant';
 Vue.use(Form);
 
+//引入GOODSAction商品导航
+import { GoodsAction, GoodsActionIcon, GoodsActionButton } from 'vant';
+Vue.use(GoodsAction);
+Vue.use(GoodsActionButton);
+Vue.use(GoodsActionIcon);
+
+
+Vue.prototype.$http = request
 Vue.config.productionTip = false
 
 new Vue({

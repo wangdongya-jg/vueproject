@@ -97,6 +97,10 @@ const router = new vueRouter({
                 showFooter: true
             },
 
+        }, {
+            path: '/detail',
+            name: 'Name',
+            component:()=>import('../views/detail/detail')
         }
 
     ],
