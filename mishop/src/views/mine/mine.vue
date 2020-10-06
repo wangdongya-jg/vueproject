@@ -1,13 +1,12 @@
 <!-- 组件说明 -->
 <template>
-  <div class="mine">
+  <div class="mine" v-if="showFlag">
     <div class="loginBox">
       <div class="userImg">
         <img src="../../assets/img/1.jpg" />
       </div>
       <div class="login">
-        <p class="userLogin">登录</p>
-        <p class="userRegister">注册</p>
+        <p class="userLogin" @click="dologin">登录 / 注册</p>
       </div>
     </div>
     <div class="dingdan">
@@ -56,11 +55,17 @@
 export default {
   components: {},
   data() {
-    return {};
+    return {
+      showFlag:true,
+    };
   },
   computed: {},
   watch: {},
-  methods: {},
+  methods: {
+    dologin(){
+      this.showFlag = false;
+    }
+  },
   created() {},
   mounted() {},
   beforeCreate() {}, //生命周期 - 创建之前

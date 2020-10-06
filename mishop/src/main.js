@@ -31,6 +31,10 @@ import { Cell, CellGroup } from 'vant';
 Vue.use(Cell);
 Vue.use(CellGroup);
 
+//引入表单
+import { Form } from 'vant';
+Vue.use(Form);
+
 Vue.config.productionTip = false
 
 new Vue({

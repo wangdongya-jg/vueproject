@@ -95,7 +95,8 @@ const router = new vueRouter({
             component: () => import("../views/mine/mine"),
             meta: {
                 showFooter: true
-            }
+            },
+
         }
 
     ],
