@@ -63,6 +63,7 @@ export default {
   align-items: center;
   padding: 0 0.4rem;
   border-bottom: 1px solid #dfdfdf;
+  z-index: 10;
 }
 .logo {
   width: 0.6rem;
@@ -108,6 +109,7 @@ export default {
   position: fixed;
   top: 1.01rem;
   display: flex;
+  z-index: 10;
 }
 .navItem {
   float: left;

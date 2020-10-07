@@ -5,6 +5,8 @@
       <van-nav-bar
         title="详情"
         left-text="返回"
+        :placeholder="true"
+        :fixed="true"
         left-arrow
         @click-left="onClickLeft"
       />
@@ -18,7 +20,23 @@
       </van-swipe>
     </div>
     <div class="detailCon">
-        <div class=""></div>
+        <h3 class="title">小米电视4A</h3>
+        <p class="desc">商品描述商品描述商品描述</p>
+        <p class="price"><span>￥</span>2399</p>
+    </div>
+    <div class="guige">
+      <p>已选</p>
+      <span>请选择商品规格</span>
+      <van-icon name="arrow" size="20" color="#888" />
+    </div>
+    <div class="area">
+      <p>送至</p>
+      <span>请选择配送地区</span>
+      <van-icon name="arrow" />
+    </div>
+    <div class="peijian">
+      <p>配件</p>
+      <van-icon name="arrow" />
     </div>
     <div>
       <van-goods-action>
@@ -60,8 +78,8 @@ export default {
 <style lang="scss" scoped>
 .detail{
     widows: 100%;
-    height: 100%;
     background: #f5f5f5;
+    margin-bottom:1.2rem;
 }
 .my-swipe .van-swipe-item {
   height: 8rem;
@@ -71,4 +89,50 @@ export default {
   text-align: center;
   background-color: #39a9ed;
 }
+.detailCon{
+  background: #fff;
+  padding:0.25rem;
+  .title{
+    font-size: 0.45rem;
+  }
+  .desc{
+    font-size: 0.3rem;
+    color: #666;
+    margin-top:0.15rem;
+  }
+  .price{
+    font-size: 0.4rem;
+    color: coral;
+    margin-top:0.15rem;
+  }
+}
+.guige{
+  background: #fff;
+  margin-top: 0.2rem;
+  height: 1rem;
+  line-height: 1rem;
+  padding:0 0.3rem;
+  p{
+    color: #888;
+    float: left;
+  }
+  span{
+    font-size: 0.3rem;
+    margin-left: 0.2rem;
+  }
+  .van-icon{
+    float: right;
+    margin-top:0.28rem;
+  }
+}
+.area{
+  @extend .guige;
+  margin-top:0;
+  border-top:1px solid #cecece;
+}
+.peijian{
+  @extend .guige;
+  border-bottom:1px solid #cecece;
+}
+
 </style>

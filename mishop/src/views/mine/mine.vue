@@ -1,13 +1,13 @@
 <!-- 组件说明 -->
 <template>
   <div class="mine">
-    <div v-if="showMine">
+    <div >
       <div class="loginBox">
         <div class="userImg">
           <img src="../../assets/img/1.jpg" />
         </div>
         <div class="login">
-          <p class="userLogin" @click="dologin">登录 / 注册</p>
+          <p class="userLogin" @click="gologin">登录 / 注册</p>
         </div>
       </div>
       <div class="dingdan">
@@ -49,72 +49,6 @@
         </van-cell-group>
       </div>
     </div>
-    <div v-if="showLogin">
-      <van-nav-bar
-        title="登录"
-        left-text="返回"
-        right-text="注册"
-        left-arrow
-        @click-left="onClickLeft"
-        @click-right="onClickRight"
-      />
-      <van-cell-group>
-        <van-field
-          v-model="username"
-          required
-          error
-          label="用户名"
-          left-icon="user-circle-o"
-          right-icon="warning-o"
-          placeholder="请输入用户名"
-        />
-        <van-field
-          v-model="password"
-          required
-          clearable
-          label="密码"
-          left-icon="eye-o"
-          placeholder="请输入密码"
-        />
-      </van-cell-group>
-      <div style="margin:16px">
-        <van-button round type="info" size="large">登录</van-button>
-      </div>
-      <div style="margin-left:130px;" @click="onClickRight">
-        <p style="color:#888">没有账号？立即注册</p>
-      </div>
-    </div>
-    <div v-if="showRegister">
-      <van-nav-bar
-        title="注册"
-        left-text="返回"
-        left-arrow
-        @click-left="goback"
-      />
-      <van-form @submit="onSubmit">
-         <van-cell-group>
-        <van-field
-          v-model="username"
-          label="用户名"
-          left-icon="user-circle-o"
-          right-icon="warning-o"
-          placeholder="请输入用户名"
-        />
-        <van-field
-          v-model="password"
-          clearable
-          label="密码"
-          left-icon="eye-o"
-          placeholder="请输入密码"
-        />
-      </van-cell-group>
-        <div style="margin: 16px;">
-          <van-button round block type="info" >
-            注册
-          </van-button>
-        </div>
-      </van-form>
-    </div>
   </div>
 </template>
 
@@ -123,34 +57,18 @@ export default {
   components: {},
   data() {
     return {
-      showMine: true,
-      showLogin: false,
-      showRegister: false,
-      username: "",
-      password: "",
+      
     };
   },
   computed: {},
   watch: {},
   methods: {
-    dologin() {
-      this.showMine = false;
-      this.showLogin = true;
+    gologin() {
+      this.$router.push({
+        path:'/login'
+      })
     },
-    onClickLeft() {
-      (this.showLogin = false), (this.showMine = true);
-    },
-    onClickRight() {
-      this.showLogin = false;
-      this.showRegister = true;
-    },
-    onSubmit(values) {
-      console.log("submit", values);
-    },
-    goback() {
-      this.showLogin = true;
-      this.showRegister = false;
-    },
+     
   },
   created() {},
   mounted() {},
