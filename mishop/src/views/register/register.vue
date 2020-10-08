@@ -50,7 +50,16 @@ export default {
       history.go(-1);
     },
     doRegister(){
-        
+      let username = this.username
+      let password = this.password
+        this.$http.get('/reg.php',{
+          params:{
+            username,
+            password
+          }
+        }).then(res=>{
+          console.log(res)
+        })
     }
   },
   created() {},

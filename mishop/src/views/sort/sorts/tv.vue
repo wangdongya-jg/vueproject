@@ -1,7 +1,7 @@
 <!-- 组件说明 -->
 <template>
-    <div class='new'>
-        123
+    <div class='tv'>
+        aaaa
     </div>
 </template>
 

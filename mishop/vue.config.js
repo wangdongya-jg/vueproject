@@ -10,7 +10,7 @@ module.exports = {
   devServer: {
     open: true,  // npm run serve后自动打开页面
     host: '0.0.0.0',  // 匹配本机IP地址(默认是0.0.0.0)
-    port: 8989, // 开发服务器运行端口号
+    port: 8989, // 运行端口号
     proxy: {
     /*   '/api': {
          target: 'http://localhost:3333', // 代理接口地址
@@ -21,7 +21,7 @@ module.exports = {
         }
       } */
         [process.env.VUE_APP_BASE_API]: {
-            target: 'http://jx.xuzhixiang.top/ap/api',
+            target: 'http://localhost:8888',
             changeOrigin: true,
             pathRewrite: {
                 ['^'+process.env.VUE_APP_BASE_API]:''

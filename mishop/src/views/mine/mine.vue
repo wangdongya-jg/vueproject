@@ -1,13 +1,13 @@
 <!-- 组件说明 -->
 <template>
   <div class="mine">
-    <div >
+    <div>
       <div class="loginBox">
         <div class="userImg">
           <img src="../../assets/img/1.jpg" />
         </div>
         <div class="login">
-          <p class="userLogin" @click="gologin">登录 / 注册</p>
+          <p class="userLogin">{{ username }}</p>
         </div>
       </div>
       <div class="dingdan">
@@ -31,7 +31,7 @@
       </div>
       <div class="dingdan2">
         <van-cell-group>
-          <van-cell title="会员福利" is-link icon="star-o"/>
+          <van-cell title="会员福利" is-link icon="star-o" />
           <van-cell title="我的优惠" is-link icon="coupon-o" />
         </van-cell-group>
       </div>
@@ -46,6 +46,7 @@
       <div class="dingdan2">
         <van-cell-group>
           <van-cell title="设置" is-link icon="setting-o" />
+          <van-cell title="退出登录" is-link icon="replay" @click="logout" />
         </van-cell-group>
       </div>
     </div>
@@ -53,25 +54,31 @@
 </template>
 
 <script>
+import { getToken, removeToken } from "../../utils/auth";
 export default {
   components: {},
   data() {
     return {
-      
+      username: "",
     };
   },
   computed: {},
   watch: {},
   methods: {
-    gologin() {
-      this.$router.push({
-        path:'/login'
-      })
+    logout() {
+      removeToken();
+      this.$router.push('/login')
     },
-     
   },
   created() {},
-  mounted() {},
+  mounted() {
+    if (getToken()) {
+      this.username = getToken();
+    } else {
+      alert("您还未登录，请先登录");
+      this.$router.push("/login");
+    }
+  },
   beforeCreate() {}, //生命周期 - 创建之前
   beforeMount() {}, //生命周期 - 挂载之前
   beforeUpdate() {}, //生命周期 - 更新之前
@@ -135,12 +142,10 @@ export default {
 }
 .dingdan2 {
   margin-top: 0.2rem;
-  .van-icon{
+  .van-icon {
     color: coral;
     font-size: 20px;
     margin-right: 0.1rem;
   }
-  
 }
-
 </style>

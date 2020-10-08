@@ -7,6 +7,20 @@
         <van-swipe-item><img src="http://qiniu.verydog.cn//show.liluo.cc/2018011213533255816.png"></van-swipe-item>
       </van-swipe>
     </div>
+    <div class="proList">
+      <div class="products">
+                <img src="../../../assets/img/1.jpg">
+                <h3>13.3笔记本 i5独显</h3>
+                <p>指纹解锁 全金属机身</p>
+                <p class="price">￥<span>5199</span></p>
+            </div>
+             <div class="products">
+                <img src="../../../assets/img/1.jpg">
+                <h3>13.3笔记本 i5独显</h3>
+                <p>指纹解锁 全金属机身</p>
+                <p class="price">￥<span>5199</span></p>
+            </div>
+    </div>
     </div>
 </template>
 
@@ -60,5 +74,28 @@ activated() {}, //如果页面有keep-alive缓存功能，这个函数会触发
     width: 100%;
   }
 }
-
+.proList{
+  margin-top:0.2rem;
+    display: flex;
+    z-index: -10;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: #fff;
+    .products{
+        width: 3.7rem;
+        height: 4.7rem;
+        img{
+            width: 100%;
+            height: 3.5rem;
+        }
+        p{
+            color: #666;
+            margin-top:0.1rem;
+        }
+        .price{
+            color: coral;
+            margin-top:0.1rem;
+        }
+    }
+}
 </style>

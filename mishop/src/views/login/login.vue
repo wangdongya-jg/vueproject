@@ -40,6 +40,7 @@
 </template>
 
 <script>
+import {setToken,getToken} from '../../utils/auth'
 export default {
   components: {},
   data() {
@@ -52,7 +53,7 @@ export default {
   watch: {},
   methods: {
     onClickLeft() {
-      history.go(-1);
+      this.$router.push('/home');
     },
     onClickRight() {
       this.$router.push({
@@ -61,12 +62,20 @@ export default {
     },
     doLogin() {
       console.log(this.username, this.password);
+      setToken('wdy')
+      this.$router.replace('/mine');
     },
-    goback() {
-      this.showLogin = true;
-      this.showRegister = false;
-    },
+    
   },
+  //发生在实例创建之前
+    beforeRouteEnter(to,from,next){ //路由组件内守卫
+    if(!getToken()){
+      next()
+    }else{
+      next('/mine')
+    }
+
+    },
   created() {},
   mounted() {},
   beforeCreate() {}, //生命周期 - 创建之前

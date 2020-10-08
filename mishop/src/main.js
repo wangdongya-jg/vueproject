@@ -32,7 +32,7 @@ import { Cell, CellGroup } from 'vant';
 Vue.use(Cell);
 Vue.use(CellGroup);
 
-//引入表单
+//引入表单f
 import { Form } from 'vant';
 Vue.use(Form);
 
@@ -42,6 +42,10 @@ Vue.use(GoodsAction);
 Vue.use(GoodsActionButton);
 Vue.use(GoodsActionIcon);
 
+//引入侧边导航
+import { Sidebar, SidebarItem } from 'vant';
+Vue.use(Sidebar);
+Vue.use(SidebarItem)
 
 Vue.prototype.$http = request
 Vue.config.productionTip = false
